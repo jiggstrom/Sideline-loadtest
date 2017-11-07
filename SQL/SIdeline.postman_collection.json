@@ -1,0 +1,226 @@
+{
+	"info": {
+		"name": "SIdeline",
+		"_postman_id": "dc2c8e2c-07bf-b17c-56fe-f052df3990f8",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "jens",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "testare",
+							"type": "string"
+						},
+						{
+							"key": "saveHelperData",
+							"type": "any"
+						},
+						{
+							"key": "showPassword",
+							"value": false,
+							"type": "boolean"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://127.0.0.1/login.php?db=sideline",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"path": [
+						"login.php"
+					],
+					"query": [
+						{
+							"key": "db",
+							"value": "sideline",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Stats (Setup Liga)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://127.0.0.1/stats.php",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"path": [
+						"stats.php"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "PlayerInfo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://127.0.0.1/playerinfo.php",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"path": [
+						"playerinfo.php"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "JoinMatch",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://127.0.0.1/joinmatch.php",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"path": [
+						"joinmatch.php"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Run(Energy)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://127.0.0.1/run.php?times=4&slot=1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"path": [
+						"run.php"
+					],
+					"query": [
+						{
+							"key": "times",
+							"value": "4",
+							"equals": true
+						},
+						{
+							"key": "slot",
+							"value": "1",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Coin (Bucks)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://127.0.0.1/coin.php?times=4&slot=1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"path": [
+						"coin.php"
+					],
+					"query": [
+						{
+							"key": "times",
+							"value": "4",
+							"equals": true
+						},
+						{
+							"key": "slot",
+							"value": "1",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "MatchState",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://127.0.0.1/matchstate.php",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"path": [
+						"matchstate.php"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
