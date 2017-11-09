@@ -8,6 +8,8 @@ namespace Sideline.Loadtest
     {
         [ValueArgument(typeof(string), 'h',"host", Description="Api host", Optional = true, DefaultValue ="http://localhost/")]
         public string BaseUrl="";
+        [ValueArgument(typeof(string), 's',"database", Description="Name of database", Optional = true, DefaultValue ="sua")]
+        public string Database="";
         [ValueArgument(typeof(string), 'u', "user", Description = "Username")]
         public string Username="";
         [ValueArgument(typeof(string), 'p', "password", Description = "Password", Optional = true, DefaultValue = "testare")]

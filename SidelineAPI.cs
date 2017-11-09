@@ -13,35 +13,36 @@ namespace Sideline.Loadtest
         public SidelineAPI(string baseUrl)
         {
             _baseUrl = baseUrl;
+            if(!_baseUrl.EndsWith("/")) _baseUrl += "/";
         }
 
         internal async Task<string> Stats()
         {
-            return await GetData("/stats.php", "", "");
+            return await GetData("stats.php", "", "");
         }
 
         internal async Task<string> JoinMatch()
         {
-            return await GetData("/joinmatch.php", "", "");
+            return await GetData("joinmatch.php", "", "");
         }
 
         internal async Task<string> Run(int count, int slot)
         {
-            return await GetData($"/run.php?times={count}&slot={slot}", "", "");
+            return await GetData($"run.php?times={count}&slot={slot}", "", "");
         }
         internal async Task<string> Coin(int count, int slot)
         {
-            return await GetData($"/coin.php?times={count}&slot={slot}", "", "");
+            return await GetData($"coin.php?times={count}&slot={slot}", "", "");
         }
 
         internal async Task<string> MatchState()
         {
-            return await GetData($"/matchstate.php", "", "");
+            return await GetData($"matchstate.php", "", "");
         }
 
-        internal async Task<string> Login(string userName, string password)
+        internal async Task<string> Login(string userName, string password, string dbname)
         {
-            return await GetData("/login.php?db=sideline",userName,password);
+            return await GetData($"login.php?db={dbname}",userName,password);
         }
 
         private async Task<string> GetData(string method, string user, string password)
@@ -58,7 +59,7 @@ namespace Sideline.Loadtest
                     string auth = "Basic " + Convert.ToBase64String(System.Text.Encoding.Default.GetBytes(user + ":" + password));
                     client.DefaultRequestHeaders.Add("Authorization", auth);
                 }
-                client.BaseAddress = new Uri(_baseUrl);
+                client.BaseAddress = new Uri(_baseUrl);                
                 HttpResponseMessage response = client.GetAsync(method).Result;
                 var data = await response.Content.ReadAsStringAsync();
                 return data;

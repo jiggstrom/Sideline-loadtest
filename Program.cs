@@ -20,7 +20,7 @@ namespace Sideline.Loadtest
                 Settings.Username = Console.ReadLine();
             }
             var su = new SidelineAPI(Settings.BaseUrl);
-            Console.WriteLine(su.Login(Settings.Username, Settings.Password).Result);
+            Console.WriteLine(su.Login(Settings.Username, Settings.Password, Settings.Database).Result);
             Console.WriteLine(su.Stats().Result);
             Console.WriteLine(su.JoinMatch().Result);
             Console.WriteLine("Tryck en tangent för att starta");
