@@ -17,7 +17,7 @@ namespace Sideline.Loadtest
 
         internal async Task<Joinmatch> JoinMatch()
         {
-            return await Call<Joinmatch>("joinmatch.php");
+            return await Call<Joinmatch>("joinmatch.php?headertiming=1");
         }
 
         internal async Task<string> Run(int count, int slot)

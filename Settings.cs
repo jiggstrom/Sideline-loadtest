@@ -6,7 +6,7 @@ namespace Sideline.Loadtest
     [ArgumentGroupCertification("u,a,t",EArgumentGroupCondition.ExactlyOneUsed)]
     internal class Settings
     {
-        [ValueArgument(typeof(string), 'h',"host", Description="Api host", Optional = true, DefaultValue ="http://localhost:8080/su")]
+        [ValueArgument(typeof(string), 'h',"host", Description="Api host", Optional = true, DefaultValue ="https://slndevliga2.azurewebsites.net/htdocs")]
         public string BaseUrl="";
         [ValueArgument(typeof(string), 's',"database", Description="Name of database", Optional = true, DefaultValue ="sua")]
         public string Database="";
